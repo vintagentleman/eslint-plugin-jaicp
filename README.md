@@ -20,7 +20,7 @@ Add one of the following configs to the `extends` section of your [`.eslintrc`](
 ```json
 {
     "extends": [
-        // ... Other configs you use, e.g. "eslint:recommended"
+        // Other configs you use, e.g. "eslint:recommended"
         "plugin:jaicp/es5"
     ]
 }
@@ -28,7 +28,7 @@ Add one of the following configs to the `extends` section of your [`.eslintrc`](
 
 ## Usage
 
-### CLI
+### Command line
 
 ```shell
 npx eslint src/
@@ -51,6 +51,8 @@ Note that you also need to teach VS Code to recognize `.sc` files as JAICP DSL. 
     }
     ```
 
+For other editors, refer to their respective plugins, e.g. [SublimeLinter-eslint](https://github.com/SublimeLinter/SublimeLinter-eslint) for Sublime Text.
+
 ## Rules
 
 The following ESLint rules are modified by the plugin configs:
@@ -60,3 +62,14 @@ The following ESLint rules are modified by the plugin configs:
 | [`no-param-reassign`](https://eslint.org/docs/latest/rules/no-param-reassign) | Enabled with `props` set to `true`. Modifications to `$context` properties are ignored: this is a common use case of `bind` callbacks. |
 | [`no-undef`](https://eslint.org/docs/latest/rules/no-undef) | Disabled. The plugin does not detect whether a referenced value is defined in a `require`d JavaScript file or `init` block, or actually not defined. |
 | [`no-unused-vars`](https://eslint.org/docs/latest/rules/no-unused-vars) | Disabled in `plugin:jaicp/es5` config. The plugin does not detect whether variables defined in `require`d JavaScript files are actually used. |
+
+To enforce other rules, use other configs like [`eslint:recommended`](https://eslint.org/docs/latest/rules/) or [`airbnb-base/legacy`](https://www.npmjs.com/package/eslint-config-airbnb-base).
+
+## Limitations
+
+- Doesn’t lint JavaScript expressions after `if`/`elseif`/`else` tags or within `{{double curly brackets}}`.
+- Currently doesn’t support scripts beginning on the same line as the tag, e.g. `script: $client.name = "John Doe"`.
+
+## License
+
+Apache-2.0 © [Just AI](https://just-ai.com/en/)
