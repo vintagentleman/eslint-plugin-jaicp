@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-jaicp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An ESLint plugin to extract and lint scripts from JAICP DSL projects",
   "keywords": [
     "eslint",

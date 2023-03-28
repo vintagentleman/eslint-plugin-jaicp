@@ -37,8 +37,7 @@ npx eslint src/
 ### Editor integrations
 
 Use the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension to integrate ESLint into Visual Studio Code.
-
-Note that you also need to teach VS Code to recognize `.sc` files as JAICP DSL. To do this:
+Note that you also need to teach VS Code to recognize `.sc` files as JAICP DSL:
 
 1. Install the [JAICP](https://help.just-ai.com/docs/en/developer-tools/vscode-extension) extension for VS Code.
 2. In the editor settings, add `jaicp` to the list of language IDs that ESLint will validate:
@@ -68,7 +67,7 @@ To enforce other rules, use other configs like [`eslint:recommended`](https://es
 ## Limitations
 
 - Doesn’t lint JavaScript expressions after `if`/`elseif`/`else` tags or within `{{double curly brackets}}`.
-- Currently doesn’t support scripts beginning on the same line as the tag, e.g. `script: $client.name = "John Doe"`.
+- Doesn’t support scripts beginning on the same line as the tag, e.g. `script: $client.name = "John Doe"`.
 
 ## License
 
