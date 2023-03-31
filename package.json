@@ -18,6 +18,10 @@
     "test": "mocha tests --recursive",
     "update:eslint-docs": "eslint-doc-generator"
   },
+  "dependencies": {
+    "vfile": "^4.2.1",
+    "vfile-location": "^3.2.0"
+  },
   "devDependencies": {
     "eslint": "^8.19.0",
     "eslint-doc-generator": "^1.0.0",

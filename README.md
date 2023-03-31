@@ -67,7 +67,6 @@ To enforce other rules, use other configs like [`eslint:recommended`](https://es
 ## Limitations
 
 - Doesn’t lint JavaScript expressions after `if`/`elseif`/`else` tags or within `{{double curly brackets}}`.
-- Doesn’t support scripts beginning on the same line as the tag, e.g. `script: $client.name = "John Doe"`.
 
 ## License
 
