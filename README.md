@@ -58,7 +58,6 @@ The following ESLint rules are modified by the plugin configs:
 
 | Rule | Status |
 |---|---|
-| [`no-param-reassign`](https://eslint.org/docs/latest/rules/no-param-reassign) | Enabled with `props` set to `true`. Modifications to `$context` properties are ignored: this is a common use case of `bind` callbacks. |
 | [`no-undef`](https://eslint.org/docs/latest/rules/no-undef) | Disabled. The plugin does not detect whether a referenced value is defined in a `require`d JavaScript file or `init` block, or actually not defined. |
 | [`no-unused-vars`](https://eslint.org/docs/latest/rules/no-unused-vars) | Disabled in `plugin:jaicp/es5` config. The plugin does not detect whether variables defined in `require`d JavaScript files are actually used. |
 
