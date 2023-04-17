@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-jaicp",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "An ESLint plugin to extract and lint scripts from JAICP DSL projects",
   "keywords": [
     "eslint",
@@ -17,6 +17,11 @@
     "lint:js": "eslint .",
     "test": "mocha tests --recursive",
     "update:eslint-docs": "eslint-doc-generator"
+  },
+  "dependencies": {
+    "deepmerge": "^4.3.1",
+    "vfile": "^4.2.1",
+    "vfile-location": "^3.2.0"
   },
   "devDependencies": {
     "eslint": "^8.19.0",
